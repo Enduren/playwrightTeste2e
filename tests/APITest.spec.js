@@ -5,8 +5,8 @@
  test('API Test', async ({ page }) => {
     
     await page.goto("https://rahulshettyacademy.com/client");
-    await page.locator("#userEmail").fill(loginData.userEmail);
-    await page.locator("#userPassword").fill(loginData.userPassword);
+    await page.locator("#userEmail").fill(loginData.apiUsername);
+    await page.locator("#userPassword").fill(loginData.apiPassword);
     await page.locator("[value='Login']").click();
     await page.waitForLoadState('networkidle');
     const token = await page.evaluate(() => window.localStorage.getItem('token'));
