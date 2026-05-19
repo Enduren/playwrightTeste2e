@@ -10,7 +10,7 @@
     await page.locator("[value='Login']").click();
     await page.waitForLoadState('networkidle');
     const token = await page.evaluate(() => window.localStorage.getItem('token'));
-    console.log(token);
+    console.log("Here's your token: " + token);
 
     
  })
