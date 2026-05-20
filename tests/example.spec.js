@@ -22,6 +22,17 @@ test('UI Controls', async ({ page }) => {
   await expect(adminRadio).toBeVisible();
   await expect(dropdownOptions).toBeVisible();
 
+  //add screen shot
+  await page.screenshot({ path: 'screenshot.png', fullPage: true });
+
+  await userRadio.click();
+  await expect(userRadio).toBeChecked();
+  await expect(adminRadio).not.toBeChecked();
+
+  // await adminRadio.click();
+  // await expect(adminRadio).toBeChecked();
+  // await expect(userRadio).not.toBeChecked();
+
 
 });
 
